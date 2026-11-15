@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Header -->
+            <div class="p-4 p-md-5 mb-4 bg-white rounded-4 border border-light-subtle shadow-sm text-center">
+                <span class="badge bg-primary px-3 py-2 rounded-pill text-uppercase mb-3">About the Project</span>
+                <h1 class="display-6 fw-bold mb-3">DevLog Blogging Platform</h1>
+                <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                    A modern, full-stack blogging application built from the ground up using Flask, SQLAlchemy, Jinja2, and Bootstrap 5 as part of the DIYInternship curriculum (Weeks 1 to 7).
+                </p>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="row g-3 mb-5 text-center">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <div class="fs-1 fw-bold text-primary">{{ stats.posts }}</div>
+                        <div class="text-muted fw-semibold small text-uppercase">Published Articles</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <div class="fs-1 fw-bold text-primary">{{ stats.users }}</div>
+                        <div class="text-muted fw-semibold small text-uppercase">Registered Authors</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <div class="fs-1 fw-bold text-primary">{{ stats.categories }}</div>
+                        <div class="text-muted fw-semibold small text-uppercase">Categories</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Milestones Grid -->
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white mb-5">
+                <h3 class="fw-bold mb-4"><i class="bi bi-calendar-check text-primary me-2"></i> Internship Milestones (Weeks 1–7)</h3>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <span class="badge bg-primary mb-2">Week 1</span>
+                            <h6 class="fw-bold">Flask Setup & Architecture</h6>
+                            <p class="small text-muted mb-0">Application factory pattern, Blueprints, SQLAlchemy ORM, Flask-Migrate integration, and SQLite setup.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <span class="badge bg-primary mb-2">Week 2</span>
+                            <h6 class="fw-bold">User Authentication</h6>
+                            <p class="small text-muted mb-0">Secure registration, login, logout, password hashing with Werkzeug, Flask-Login session management.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <span class="badge bg-primary mb-2">Week 3</span>
+                            <h6 class="fw-bold">Post CRUD & Rich Text</h6>
+                            <p class="small text-muted mb-0">Full CRUD operations, Category & Tag relationships, Flask-WTF forms, CSRF protection, and Quill rich text editor.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <span class="badge bg-primary mb-2">Week 4</span>
+                            <h6 class="fw-bold">Frontend & Pagination</h6>
+                            <p class="small text-muted mb-0">Jinja2 template inheritance, responsive Bootstrap 5 interface, author profiles, and pagination.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <span class="badge bg-primary mb-2">Week 5</span>
+                            <h6 class="fw-bold">Commenting System</h6>
+                            <p class="small text-muted mb-0">Authenticated commenting, comment management, user avatars, and authorization controls.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <span class="badge bg-primary mb-2">Week 6</span>
+                            <h6 class="fw-bold">Search & Filtering</h6>
+                            <p class="small text-muted mb-0">Full-text search over titles and contents, multi-criteria filtering by category and tag, query preservation.</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <span class="badge bg-success mb-2">Week 7</span>
+                            <h6 class="fw-bold">Testing & Deployment</h6>
+                            <p class="small text-muted mb-0">Automated test suite using pytest, Gunicorn WSGI server setup, Docker containerization, and production hardening.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+                <h4 class="fw-bold mb-3"><i class="bi bi-stack text-primary me-2"></i> Technology Stack</h4>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="border rounded-3 p-3 text-center">
+                            <i class="bi bi-filetype-py fs-2 text-primary"></i>
+                            <div class="fw-bold mt-2">Python 3.11</div>
+                            <small class="text-muted">Core Language</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="border rounded-3 p-3 text-center">
+                            <i class="bi bi-cup-hot fs-2 text-primary"></i>
+                            <div class="fw-bold mt-2">Flask 3.x</div>
+                            <small class="text-muted">Web Framework</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="border rounded-3 p-3 text-center">
+                            <i class="bi bi-database fs-2 text-primary"></i>
+                            <div class="fw-bold mt-2">SQLAlchemy</div>
+                            <small class="text-muted">ORM & SQLite</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="border rounded-3 p-3 text-center">
+                            <i class="bi bi-bootstrap fs-2 text-primary"></i>
+                            <div class="fw-bold mt-2">Bootstrap 5</div>
+                            <small class="text-muted">UI Framework</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

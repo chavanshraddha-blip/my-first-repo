@@ -1,0 +1,35 @@
+# Git
+.git
+.gitignore
+
+# Python bytecode & cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Local databases & test instances
+instance/
+*.sqlite
+*.sqlite3
+*.db
+
+# Environment and local settings
+.env
+.env.local
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+Desktop.ini
